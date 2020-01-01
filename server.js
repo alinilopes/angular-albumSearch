@@ -1,12 +1,13 @@
 const express = require("express");
 const path = require("path");
-const nomeApp = process.env.npm_package_name;
+
 const app = express();
 
-app.use(express.static(`$/dist/$`));
+// Serve os arquivos estáticos da pasta dist (gerada pelo ng build)
+app.use(express.static(__dirname + "/dist/angular-albumsearch"));
 
-app.get("/*", (req, res) => {
-  res.sendFile(path.join(`$/dist/$/index.html`));
+app.get("/*", function(req, res) {
+  res.sendFile(path.join(__dirname + "/dist/angular-albumsearch/index.html"));
 });
 
 app.listen(process.env.PORT || 8080);
