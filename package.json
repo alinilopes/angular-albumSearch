@@ -2,12 +2,12 @@
   "name": "angular-albumsearch",
   "version": "0.0.0",
   "scripts": {
+    "start": "node server.js",
     "ng": "ng",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "start": "node server.js",
     "postinstall": "ng build --aot --prod"
   },
   "private": true,
